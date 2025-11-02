@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Load Balanced App</title>
+</head>
+<body>
+  <h1>Hello Bestie! You're on the Frontend 💗</h1>
+  <button onclick="fetchData()">Check Backend</button>
+  <p id="msg"></p>
+
+  <script>
+    function fetchData() {
+      fetch("http://YOUR-LOAD-BALANCER-DNS/")
+      .then(res => res.text())
+      .then(data => document.getElementById("msg").innerHTML = data);
+    }
+  </script>
+</body>
+</html>
